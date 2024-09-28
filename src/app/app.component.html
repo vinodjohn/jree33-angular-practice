@@ -52,6 +52,9 @@
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
+      <button mat-fab aria-label="Add dog button" (click)="addRandom()">
+        <mat-icon>add</mat-icon>
+      </button>
       <div *ngIf="dogsGlobal.length < 1">
         <p>No dogs available.</p>
       </div>
@@ -75,6 +78,7 @@
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
+        <button mat-button (click)="bark()">Bark</button>
       </div>
     </div>
   </div>

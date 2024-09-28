@@ -14,6 +14,8 @@ import {
   MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef,
   MatTable
 } from "@angular/material/table";
+import {MatButton, MatFabButton} from "@angular/material/button";
+import {MatIcon} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -32,7 +34,10 @@ import {
     MatHeaderRow,
     MatHeaderRowDef,
     MatRow,
-    MatRowDef
+    MatRowDef,
+    MatButton,
+    MatFabButton,
+    MatIcon
   ],
   providers: [
     provideAnimationsAsync()
