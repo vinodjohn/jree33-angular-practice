@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
 
   dogTitle = 'List of dogs';
   dogsGlobal: Dog[] = [];
+  displayedColumns: string[] = ['name', 'heightInCm', 'isAlive'];
 
 
   dogData(): Dog[] {
