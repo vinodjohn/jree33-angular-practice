@@ -1,0 +1,25 @@
+<div id="dogList" *ngIf="dogs.length > 0">
+  <h1>List of dynamic dogs</h1>
+  <ul>
+    <li *ngFor="let dog of dogs">
+      {{ dog.name }}, {{ dog.heightInCm }}, {{ dog.isAlive }}
+    </li>
+  </ul>
+</div>
+<div id="dogFormDiv">
+  <h3>Add new Dog</h3>
+  <form id="dogForm" #dogForm="ngForm" (ngSubmit)="addDog(dogForm)">
+    <label for="name">Dog name:</label>
+    <input type="text" name="name" id="name" [(ngModel)]="name" />
+    <br/>
+    <label for="height">Height:</label>
+    <input type="number" name="height" id="height" [(ngModel)]="heightInCm" />
+    <br/>
+    <label for="yes">Is alive?</label>
+    <input type="radio" name="alive" id="yes" [(ngModel)]="alive" value="yes" /> Yes
+    <input type="radio" name="alive" id="no" [(ngModel)]="alive" value="no" /> No
+    <br/>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+

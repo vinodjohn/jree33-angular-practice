@@ -16,11 +16,14 @@ import {
 } from "@angular/material/table";
 import {MatButton, MatFabButton} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";
+import { DogFormComponent } from './dog-form/dog-form.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    DogComponent
+    DogComponent,
+    DogFormComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import {MatIcon} from "@angular/material/icon";
     MatRowDef,
     MatButton,
     MatFabButton,
-    MatIcon
+    MatIcon,
+    FormsModule
   ],
   providers: [
     provideAnimationsAsync()
